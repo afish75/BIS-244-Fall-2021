@@ -11,7 +11,7 @@ tonnage <- read.csv("TBQ05.20211116133909.csv")
 str(tonnage)
 tonnage$VALUE <- as.numeric(tonnage$VALUE)
 tonnage$VALUE[is.na(tonnage$VALUE)] <- 0
-tonnage$Region.of.Trade <- as.factor(Region.of.Trade)
+tonnage$Region.of.Trade <- as.factor(tonnage$Region.of.Trade)
 by(tonnage$VALUE,tonnage$Region.of.Trade,sum)
 
 
